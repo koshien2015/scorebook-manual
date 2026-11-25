@@ -15,6 +15,8 @@
 
 ページを足すときは、`astro.config.mjs` の `sidebar` にも1行足します。
 
+配色とフォントは `src/styles/custom.css` にあります。CAP-SCOREBOOK のアプリと同じ値です。
+
 ## 手元で表示する
 
 Node.js 22 が必要です。

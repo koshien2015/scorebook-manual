@@ -4,7 +4,7 @@ import starlight from '@astrojs/starlight';
 
 // GitHub Pages の公開先。リポジトリ名を変えたら base も合わせる
 const SITE = 'https://koshien2015.github.io';
-const BASE = '/scoresheet-manual';
+const BASE = '/scorebook-manual';
 
 const page = (slug, ja, zh) => ({
 	label: ja,
@@ -21,6 +21,21 @@ export default defineConfig({
 				ja: 'CAP-SCOREBOOK 記録者マニュアル',
 				'zh-TW': 'CAP-SCOREBOOK 記錄員手冊',
 			},
+			customCss: ['./src/styles/custom.css'],
+			head: [
+				{ tag: 'link', attrs: { rel: 'preconnect', href: 'https://fonts.googleapis.com' } },
+				{
+					tag: 'link',
+					attrs: { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: true },
+				},
+				{
+					tag: 'link',
+					attrs: {
+						rel: 'stylesheet',
+						href: 'https://fonts.googleapis.com/css2?family=BIZ+UDGothic:wght@400;700&display=swap',
+					},
+				},
+			],
 			defaultLocale: 'root',
 			locales: {
 				root: { label: '日本語', lang: 'ja' },
