@@ -113,3 +113,12 @@
 		white-space: nowrap;
 	}
 }
+
+/* 画面写真と動画はスマートフォンの画面なので、広い画面でも幅を抑え、枠で地と分ける */
+.sl-markdown-content :is(img, video) {
+	display: block;
+	max-width: min(100%, 360px);
+	height: auto;
+	border: 1px solid var(--sl-color-gray-5);
+	border-radius: 0.5rem;
+}
